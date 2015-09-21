@@ -18,4 +18,14 @@
  
  */
 
+-(NSString *)stringByRollCallingDwarfsInArray:(NSArray *)dwarfs;
+
+-(NSArray *)arrayOfPlaneteerShoutsFromArray:(NSArray *)powers;
+
+-(NSString *)summonCaptainPlanetWithPowers:(NSArray *)powers;
+
+-(NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames;
+
+-(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags;
+
 @end
