@@ -43,7 +43,15 @@
 
 - (NSString *)summonCaptainPlanetWithPowers:(NSArray *)powers
 {
-    return nil;
+    NSMutableString *summon = [NSMutableString stringWithString:@"Let out powers combine:\n"];
+    
+    for (NSUInteger i = 0; i < [powers count]; i++) {
+        [summon stringByAppendingFormat:@"%@\n", powers[i]];
+    }
+    
+    [summon stringByAppendingString:@"Go Planet!"];
+    NSLog(@"*****************************%@", summon);
+    return summon;
 }
 
 - (NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames
