@@ -17,7 +17,16 @@
 
 - (NSString *)stringByRollCallingDwarfsInArray:(NSArray *)dwarfs
 {
-    return nil;
+    NSMutableString *rollCall = [[NSMutableString alloc] init];
+    
+    for (NSUInteger i = 0; i < [dwarfs count]; i++) {
+        if (i > 0) {
+            [rollCall stringByAppendingString:@" |"];
+        }
+        [rollCall stringByAppendingFormat:@" %li. %@", i + 1, dwarfs[i]];
+    }
+    
+    return rollCall;
 }
 
 - (NSArray *)arrayOfPlaneteerShoutsFromArray:(NSArray *)powers
