@@ -17,15 +17,15 @@
 
 - (NSString *)stringByRollCallingDwarfsInArray:(NSArray *)dwarfs
 {
-    NSMutableString *rollCall = [[NSMutableString alloc] init];
+    NSString *rollCall = [[NSMutableString alloc] init];
     
     for (NSUInteger i = 0; i < [dwarfs count]; i++) {
         if (i > 0) {
-            [rollCall stringByAppendingString:@" |"];
+            rollCall = [rollCall stringByAppendingString:@" | "];
         }
-        [rollCall stringByAppendingFormat:@" %li. %@", i + 1, dwarfs[i]];
+        rollCall = [rollCall stringByAppendingFormat:@"%li. %@", i + 1, dwarfs[i]];
     }
-    
+    NSLog(@"**************************%@", rollCall);
     return rollCall;
 }
 
@@ -58,18 +58,25 @@
 - (NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames
 {
     for (NSUInteger i = 0; i < [cheesesInStock count]; i++) {
-        for (NSUInteger j = 0; j < [premiumCheeseNames count]; i++) {
-            if ([cheesesInStock[i] isEqualToString:premiumCheeseNames[i]]) {
+        for (NSUInteger j = 0; j < [premiumCheeseNames count]; j++) {
+            if ([cheesesInStock[i] isEqualToString:premiumCheeseNames[j]]) {
                 return cheesesInStock[i];
             }
         }
     }
-    return @"No premium cheeses in stock";
+    return @"No premium cheeses in stock.";
 }
 
 - (NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags
 {
-    return nil;
+    NSMutableArray *coinsArray = [[NSMutableArray alloc] init];
+    for (NSUInteger i = 0; i < [moneyBags count]; i++) {
+        NSUInteger count = [moneyBags[i] count];
+        NSString *countToString = [NSString stringWithFormat:@"$%li", count];
+        [coinsArray addObject:countToString];
+    }
+    NSLog(@"******************%@", coinsArray);
+    return coinsArray;
 }
 
 @end
