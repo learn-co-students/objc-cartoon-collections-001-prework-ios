@@ -86,7 +86,6 @@ describe(@"FISAppDelegate", ^{
             });
             
             it(@"returns the Planeteers' call to summon Captain Planet",^{
-                NSLog(@"$@", [appDelegate summonCaptainPlanetWithPowers:powersToBeCombined]);
                 expect([appDelegate summonCaptainPlanetWithPowers:powersToBeCombined]).to.equal(@"Let our powers combine:\nEARTH!\nFIRE!\nWIND!\nWATER!\nHEART!\nGo Planet!");
             });
         });

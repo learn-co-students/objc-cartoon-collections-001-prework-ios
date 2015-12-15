@@ -35,7 +35,7 @@
     
     for (NSUInteger i = 0; i < [powers count]; i++) {
         NSString *temp = [NSString stringWithFormat:@"%@!", [powers[i] uppercaseString]];
-        [shouts addObject:temp];
+        [shouts addObject: temp];
     }
     
     return shouts;
@@ -43,20 +43,28 @@
 
 - (NSString *)summonCaptainPlanetWithPowers:(NSArray *)powers
 {
-    NSMutableString *summon = [NSMutableString stringWithString:@"Let out powers combine:\n"];
+    NSArray *shouts = [self arrayOfPlaneteerShoutsFromArray:powers];
     
-    for (NSUInteger i = 0; i < [powers count]; i++) {
-        [summon stringByAppendingFormat:@"%@\n", powers[i]];
+    NSString *summon = @"Let our powers combine:\n";
+    
+    for (NSUInteger i = 0; i < [shouts count]; i++) {
+        summon = [summon stringByAppendingFormat:@"%@\n", shouts[i]];
     }
     
-    [summon stringByAppendingString:@"Go Planet!"];
-    NSLog(@"*****************************%@", summon);
+    summon = [summon stringByAppendingString:@"Go Planet!"];
     return summon;
 }
 
 - (NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames
 {
-    return nil;
+    for (NSUInteger i = 0; i < [cheesesInStock count]; i++) {
+        for (NSUInteger j = 0; j < [premiumCheeseNames count]; i++) {
+            if ([cheesesInStock[i] isEqualToString:premiumCheeseNames[i]]) {
+                return cheesesInStock[i];
+            }
+        }
+    }
+    return @"No premium cheeses in stock";
 }
 
 - (NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags
