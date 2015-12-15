@@ -25,7 +25,6 @@
         }
         rollCall = [rollCall stringByAppendingFormat:@"%li. %@", i + 1, dwarfs[i]];
     }
-    NSLog(@"**************************%@", rollCall);
     return rollCall;
 }
 
@@ -71,11 +70,10 @@
 {
     NSMutableArray *coinsArray = [[NSMutableArray alloc] init];
     for (NSUInteger i = 0; i < [moneyBags count]; i++) {
-        NSUInteger count = [moneyBags[i] count];
-        NSString *countToString = [NSString stringWithFormat:@"$%li", count];
+        NSUInteger currentCount = [moneyBags[i] length];
+        NSString *countToString = [NSString stringWithFormat:@"$%li", currentCount];
         [coinsArray addObject:countToString];
     }
-    NSLog(@"******************%@", coinsArray);
     return coinsArray;
 }
 
