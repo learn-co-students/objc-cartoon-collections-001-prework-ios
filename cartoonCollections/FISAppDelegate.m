@@ -11,7 +11,12 @@
 
 - (NSString *)stringByRollCallingDwarfsInArray:(NSArray *)dwarfs {
     
-    return nil;
+    NSString *separator = @" | ";
+    NSMutableString *string = [@"" mutableCopy];
+    for (int i = 0; i < [dwarfs count]; i++) {
+        [string appendFormat:@"%i. %@%@", i+1, dwarfs[i], separator];
+    }
+    return [string substringToIndex:[string length]-[separator length]];
 }
 
 - (NSArray *)arrayOfPlaneteerShoutsFromArray:(NSArray *)powers {
