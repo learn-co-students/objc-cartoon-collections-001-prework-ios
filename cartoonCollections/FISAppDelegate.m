@@ -38,7 +38,14 @@
 
 - (NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames {
     
-    return nil;
+    NSString *cheese;
+    for (int i = 0; i < [cheesesInStock count]; i++) {
+        cheese = cheesesInStock[i];
+        if ([premiumCheeseNames containsObject:cheese]) {
+            return cheese;
+        }
+    }
+    return @"No premium cheeses in stock.";
 }
 
 - (NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags {
