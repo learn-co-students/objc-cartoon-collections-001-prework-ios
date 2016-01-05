@@ -74,9 +74,7 @@
     NSString *paperValue = @"";
     
     for (NSUInteger i = 0; i < [moneyBags count]; i++) {
-        for (NSUInteger j = 0; j < [moneyBags[i] length]; j++) {
-            paperValue = [paperValue stringByAppendingString:@"$"];
-        }
+        paperValue = [paperValue stringByAppendingFormat:@"$%lu", [moneyBags[i] length]];
         [paperBills addObject:paperValue];
         paperValue = @"";
     }
