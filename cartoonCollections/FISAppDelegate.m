@@ -30,7 +30,10 @@
 
 - (NSString *)summonCaptainPlanetWithPowers:(NSArray *)powers {
     
-    return nil;
+    NSMutableArray *phraseComponents = [[self arrayOfPlaneteerShoutsFromArray:powers] mutableCopy];
+    [phraseComponents insertObject:@"Let our powers combine:" atIndex:0];
+    [phraseComponents insertObject:@"Go Planet!" atIndex:[phraseComponents count]];
+    return [phraseComponents componentsJoinedByString:@"\n"];
 }
 
 - (NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames {
