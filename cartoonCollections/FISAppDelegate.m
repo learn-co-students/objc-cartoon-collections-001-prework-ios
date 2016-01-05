@@ -21,7 +21,11 @@
 
 - (NSArray *)arrayOfPlaneteerShoutsFromArray:(NSArray *)powers {
     
-    return nil;
+    NSMutableArray *array = [NSMutableArray array];
+    for (int i = 0; i < [powers count]; i++) {
+        [array addObject:[NSString stringWithFormat:@"%@!", [powers[i] uppercaseString]]];
+    }
+    return array;
 }
 
 - (NSString *)summonCaptainPlanetWithPowers:(NSArray *)powers {
