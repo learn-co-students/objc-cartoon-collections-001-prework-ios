@@ -50,7 +50,13 @@
 
 - (NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags {
     
-    return nil;
+    NSMutableArray *paperBills = [NSMutableArray arrayWithCapacity:[moneyBags count]];
+    NSString *filteredMoneyBag;
+    for (int i = 0; i < [moneyBags count]; i++) {
+        filteredMoneyBag = [[moneyBags[i] componentsSeparatedByCharactersInSet:[[NSCharacterSet characterSetWithCharactersInString:@"$"] invertedSet]] componentsJoinedByString:@""];
+        [paperBills addObject:[NSString stringWithFormat:@"$%lu", [filteredMoneyBag length]]];
+    }
+    return paperBills;
 }
 
 @end
