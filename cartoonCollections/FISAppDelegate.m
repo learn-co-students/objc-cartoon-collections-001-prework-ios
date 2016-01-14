@@ -46,7 +46,7 @@
     captainPlanetSummons = [captainPlanetSummons stringByAppendingString:(@"\nGo Planet!")];
     return captainPlanetSummons;
 }
-//BOOL isTheObjectThere = [myArray containsObject: @"my string"];
+
 - (NSString *) firstPremiumCheeseInStock: (NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames {
     NSString *checkInStock = @"No premium cheeses in stock.";
     for (NSInteger i = 0; i < premiumCheeseNames.count; i++) {
