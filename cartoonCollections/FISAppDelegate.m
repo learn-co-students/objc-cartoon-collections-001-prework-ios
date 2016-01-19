@@ -108,8 +108,8 @@
     NSMutableArray *paperBills = [moneyBags mutableCopy];
     
     for (NSUInteger i = 0; i < [moneyBags count]; i++) {
-        NSString *money = paperBills[i];
-        NSString *bill = [NSString stringWithFormat:@"$%@", money];
+        
+        NSString *bill = [NSMutableString stringWithFormat:@"$%lu", [moneyBags[i] length]];
         paperBills[i] = bill;
     }
     
