@@ -20,11 +20,18 @@
     for (NSUInteger i = 0; i < [dwarfs count]; i++) {
         NSUInteger rollCallNumber = i + 1;
         NSString *rollCallName = [dwarfs objectAtIndex:i];
-        [rollCall appendFormat:@"%lu. %@ | ",rollCallNumber, rollCallName];
         
+        if (i == 0) {
+            [rollCall appendFormat:@"%lu. %@",rollCallNumber, rollCallName];
+        }else{
+            
+    
+        [rollCall appendFormat:@" | %lu. %@",rollCallNumber, rollCallName];
+            
+        }
         
     }
-    NSLog(@"%@", rollCall);
+    
     return rollCall;
 }
 
