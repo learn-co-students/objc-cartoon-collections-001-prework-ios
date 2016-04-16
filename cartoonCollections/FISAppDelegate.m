@@ -46,7 +46,17 @@
 }
 
 -(NSString *)summonCaptainPlanetWithPowers:(NSArray *)powers{
-    return nil;
+    NSMutableString *combinePhrase = [@"Let our powers combine:\n" mutableCopy];
+    NSMutableString *goPlanetPhrase = [@"Go Planet!" mutableCopy];
+    NSMutableString *powersShoutPhrase = [[NSMutableString alloc]init];
+    NSArray *powersShouted = [self arrayOfPlaneteerShoutsFromArray:powers];
+    for (NSUInteger i = 0; i < [powersShouted count]; i++) {
+        [powersShoutPhrase appendFormat:@"%@\n", powersShouted[i]];
+    }
+    NSString *summonPhrase = [NSString stringWithFormat:@"%@%@%@",combinePhrase,powersShoutPhrase,goPlanetPhrase];
+    
+    
+    return summonPhrase;
 }
 
 -(NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames{
