@@ -24,19 +24,25 @@
         if (i == 0) {
             [rollCall appendFormat:@"%lu. %@",rollCallNumber, rollCallName];
         }else{
-            
-    
         [rollCall appendFormat:@" | %lu. %@",rollCallNumber, rollCallName];
-            
         }
-        
     }
     
     return rollCall;
 }
 
 -(NSArray *)arrayOfPlaneteerShoutsFromArray:(NSArray *)powers{
-    return nil;
+    NSString *powerShout =
+    @"%@";
+    NSMutableArray *powersShouted = [powers mutableCopy];
+    for (NSUInteger i = 0; i < [powers count]; i++) {
+        powerShout = [NSString stringWithFormat:@"%@!",powers[i]];
+        powerShout = [powerShout uppercaseString];
+        [powersShouted replaceObjectAtIndex:i withObject:powerShout];
+        
+        }
+   
+    return powersShouted;
 }
 
 -(NSString *)summonCaptainPlanetWithPowers:(NSArray *)powers{
