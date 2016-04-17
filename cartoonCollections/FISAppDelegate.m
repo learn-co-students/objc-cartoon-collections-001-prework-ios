@@ -20,14 +20,12 @@
     for (NSUInteger i = 0; i < [dwarfs count]; i++) {
         NSUInteger rollCallNumber = i + 1;
         NSString *rollCallName = [dwarfs objectAtIndex:i];
-        
         if (i == 0) {
             [rollCall appendFormat:@"%lu. %@",rollCallNumber, rollCallName];
         }else{
         [rollCall appendFormat:@" | %lu. %@",rollCallNumber, rollCallName];
         }
     }
-    
     return rollCall;
 }
 
@@ -39,9 +37,7 @@
         powerShout = [NSString stringWithFormat:@"%@!",powers[i]];
         powerShout = [powerShout uppercaseString];
         [powersShouted replaceObjectAtIndex:i withObject:powerShout];
-        
         }
-   
     return powersShouted;
 }
 
@@ -54,7 +50,6 @@
         [powersShoutPhrase appendFormat:@"%@\n", powersShouted[i]];
     }
     NSString *summonPhrase = [NSString stringWithFormat:@"%@%@%@",combinePhrase,powersShoutPhrase,goPlanetPhrase];
-    
     
     return summonPhrase;
 }
@@ -75,7 +70,14 @@
 }
 
 -(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags{
-    return nil;
+    NSString *coinCount = @"";
+    NSMutableArray *convertedToCash = [[NSMutableArray alloc]init];
+    for (NSUInteger i = 0; i < [moneyBags count]; i++) {
+        coinCount = moneyBags [i];
+        coinCount = [NSString stringWithFormat:@"$%lu",[coinCount length]];
+        [convertedToCash addObject:coinCount];
+    }
+    return convertedToCash;
 }
 
 
