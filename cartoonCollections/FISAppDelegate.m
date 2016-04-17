@@ -60,7 +60,21 @@
 }
 
 -(NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeseNames{
-    return nil;
+    NSString *inStockCheese = @"";
+    NSString *premiumCheese = @"";
+    NSString *cheeseStatusPhrase = @"";
+    NSString *notInStockPhrase = @"No premium cheeses in stock.";
+    for (NSUInteger i = 0; i < [cheesesInStock count]; i++) {
+        inStockCheese = cheesesInStock [i];
+        premiumCheese = premiumCheeseNames [i];
+        if ([inStockCheese isEqualToString:premiumCheese]) {
+            cheeseStatusPhrase = inStockCheese;
+        }else{
+            cheeseStatusPhrase = notInStockPhrase;
+        }
+    }
+    
+    return cheeseStatusPhrase;
 }
 
 -(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags{

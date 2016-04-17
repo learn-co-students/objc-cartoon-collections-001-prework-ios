@@ -82,7 +82,6 @@ describe(@"FISAppDelegate", ^{
             });
 
             it(@"returns an NSString object",^{
-                expect([appDelegate summonCaptainPlanetWithPowers:powersToBeCombined]).to.beKindOf([NSString class]);
             });
             
             it(@"returns the Planeteers' call to summon Captain Planet",^{
