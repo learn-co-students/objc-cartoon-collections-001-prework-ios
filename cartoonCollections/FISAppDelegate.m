@@ -4,6 +4,9 @@
 
 @implementation FISAppDelegate
 
+// Objectives:
+// 1. Practice utilizing the debugging suite while exercising what you've already learned.
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     return YES;
