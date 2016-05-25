@@ -13,7 +13,7 @@
 
 -(NSString *)summonCaptainPlanetWithPowers : (NSArray *) powers;
 
--(NSString *)firstPremiumCheeseInStock: (NSArray *) cheesesInStock premiumCheeseNames :(NSArray *) premiumCheeses;
+-(NSString *)firstPremiumCheeseInStock:(NSArray *)premiumCheeses premiumCheeseNames:(NSArray *)cheesesInStock;
 
 -(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills: (NSArray *)moneyBags;
 
