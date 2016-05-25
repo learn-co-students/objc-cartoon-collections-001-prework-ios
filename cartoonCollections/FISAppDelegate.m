@@ -57,16 +57,18 @@
 
 -(NSString *)summonCaptainPlanetWithPowers : (NSArray *) powers {
     NSArray *arrayOfPowersToTurnIntoString = [self arrayOfPlaneteerShoutsFromArray:powers];
-    NSString *prePowersInsert = @"Let our powers combine:";
-    NSString *postPowersInsert = @"Go Planet!";
-    NSString *powersStrungTogether = @"";
+    NSString *prePowersInsert = @"Let our powers combine:\n";
+    NSString *postPowersInsert = @"\nGo Planet!";
+    NSString *powersWithFormat;
+    NSMutableArray *powersStrungTogether = [[NSMutableArray alloc] init];
     
     for (NSInteger i = 0; i+1 <= [arrayOfPowersToTurnIntoString count] ; i++) {
         
-        NSString *powersStrungTogether = [NSString stringWithFormat:@"%@\n", arrayOfPowersToTurnIntoString[i]];
-        return powersStrungTogether;
+        [powersStrungTogether addObject: arrayOfPowersToTurnIntoString[i]];
+        powersWithFormat = [powersStrungTogether componentsJoinedByString:@"\n"];
+        [@"\n" stringByAppendingString: [powersWithFormat stringByAppendingString:@"\n"]];
     }
-    NSString *captainSummoningPowersPart = [prePowersInsert stringByAppendingString: powersStrungTogether];
+    NSString *captainSummoningPowersPart = [prePowersInsert stringByAppendingString: powersWithFormat];
     NSString *finalSummoningCaptain  = [captainSummoningPowersPart stringByAppendingString: postPowersInsert];
     
     return finalSummoningCaptain;
@@ -83,8 +85,8 @@
     NSString *caseForNoCheesesInCommon = @"No premium cheeses in stock.";
     
     
-    for (NSUInteger i = 0; i+1 <= [premiumCheeses count]; i++) {
-        for (NSUInteger j = 0; j<= [cheesesInStock count]; j++) {
+    for (NSUInteger i = 0; i <= [premiumCheeses count]-1; i++) {
+        for (NSUInteger j = 0; j<= [cheesesInStock count]-1; j++) {
             if ([premiumCheeses[i] isEqualToString: cheesesInStock[j]]) {
                 return premiumCheeses[i];
             }
@@ -98,15 +100,23 @@
  * Write the implementation for arrayByConvertingMoneyBagsIntoPaperBills: to count the dollar coins (one coin is represented by one $) in each string
  */
 -(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills: (NSArray *) moneyBags {
-    NSArray *paperBillAmount = @[];
-    for (NSUInteger i = 0; i+1<=[moneyBags count]; i++) {
+    NSMutableArray *paperBillAmount = [[NSMutableArray alloc] init];
+    NSString *amountAsString;
+    NSMutableArray *total = [[NSMutableArray alloc] init];
+    NSArray *returnAmount;
+    for (NSUInteger i = 0; i<=[moneyBags count]-1; i++)
+    {
         NSInteger amountOfMoney = [moneyBags[i] length];
         NSNumber *numberAmountOfMoney = @(amountOfMoney);
-        paperBillAmount = @[@"%@",numberAmountOfMoney];
+        amountAsString = [numberAmountOfMoney stringValue];
+        [total addObject:[@"$" stringByAppendingString:amountAsString]];
+        NSLog(@"total amount %@", total[i]);
+//        dollarSignWithStringAmount = [dollarSignWithStringAmount stringByAppendingString:amountAsString];
+        [paperBillAmount addObject: total[i]];
     }
+    returnAmount = paperBillAmount;
     
-    
-    return paperBillAmount;
+    return returnAmount;
 }
 
 @end
