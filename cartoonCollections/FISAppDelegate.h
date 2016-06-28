@@ -6,10 +6,14 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-/**
- 
- * Declare your methods here.
- 
- */
+- (NSString *)stringByRollCallingDwarfsInArray:(NSArray *)dwarfs;
+
+- (NSArray *)arrayOfPlaneteerShoutsFromArray:(NSArray *)powers;
+
+- (NSArray *)summonCaptainPlanetWithPowers:(NSArray *)powers;
+
+- (NSString *)firstPremiumCheeseInStock:(NSArray *)cheesesInStock premiumCheeseNames:(NSArray *)premiumCheeses;
+
+- (NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags;
 
 @end

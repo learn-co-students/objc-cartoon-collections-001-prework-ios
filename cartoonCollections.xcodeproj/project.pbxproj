@@ -210,6 +210,9 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Joe Burgess";
 				TargetAttributes = {
+					D8478071193F52D8005FEBA5 = {
+						DevelopmentTeam = 3SNBA99P89;
+					};
 					D847808C193F52D8005FEBA5 = {
 						TestTargetID = D8478071193F52D8005FEBA5;
 					};
@@ -410,11 +413,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cartoonCollections/cartoonCollections-Prefix.pch";
 				INFOPLIST_FILE = "cartoonCollections/cartoonCollections-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -424,11 +430,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "cartoonCollections/cartoonCollections-Prefix.pch";
 				INFOPLIST_FILE = "cartoonCollections/cartoonCollections-Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = "FlatironSchool.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
