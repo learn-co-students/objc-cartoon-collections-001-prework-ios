@@ -82,19 +82,19 @@
 
 - (NSArray *)arrayByConvertingMoneyBagsIntoPaperBills: (NSArray *)moneyBags {
     
-    NSMutableArray *coinsToDollars = [[NSMutableArray alloc]init];
+    NSMutableArray *finalDollars = [[NSMutableArray alloc]init];
     
     for (NSUInteger i= 0; i < [moneyBags count]; i++) {
         
         NSString *dollarCoin = moneyBags[i];
         NSUInteger *moneyBagLength = [dollarCoin length];
         NSString *moneyInDollars = [NSString stringWithFormat:@"$%lu", moneyBagLength];
-        [coinsToDollars addObject:moneyInDollars];
+        [finalDollars addObject:moneyInDollars];
         
         
     }
     
-    return coinsToDollars;
+    return finalDollars;
 }
 
 @end
