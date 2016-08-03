@@ -103,4 +103,16 @@
     return paperMoney;
 }
 
+//-(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags {
+//    NSString *coinCount = @"";
+//    NSMutableArray *coinsToCash = [[NSMutableArray alloc]init];
+//    
+//    for (NSUInteger i = 0; i < [moneyBags count]; i++) {
+//        coinCount = moneyBags[i];
+//        coinCount = [NSString stringWithFormat:@"$%lu",[coinCount length]];
+//        [coinsToCash addObject:coinCount];
+//    }
+//    return coinsToCash;
+//}
+
 @end
