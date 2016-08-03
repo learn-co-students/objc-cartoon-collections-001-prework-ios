@@ -77,7 +77,34 @@
 }
 
 -(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags {
-    return nil;
+    NSLog(@"%@", moneyBags);
+    NSMutableArray *paperMoney = [moneyBags mutableCopy];
+    
+    for (NSUInteger i = 0; i < [moneyBags count]; i++) {
+        NSString *coinsString = moneyBags[i];
+        NSUInteger coinsInt = [coinsString length];
+        
+        NSLog(@"%lu", coinsInt);
+        
+        switch (coinsInt) {
+            case 1:
+                [paperMoney replaceObjectAtIndex:i withObject:@"$1"];
+                break;
+            case 2:
+                [paperMoney replaceObjectAtIndex:i withObject:@"$2"];
+                break;
+            case 5:
+                [paperMoney replaceObjectAtIndex:i withObject:@"$5"];
+                break;
+            case 10:
+                [paperMoney replaceObjectAtIndex:i withObject:@"$10"];
+                break;
+            default:
+                break;
+        }
+    }
+    NSLog(@"%@", paperMoney);
+    return paperMoney;
 }
 
 @end
