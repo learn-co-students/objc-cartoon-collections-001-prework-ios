@@ -76,43 +76,43 @@
     return cheeseStatus;
 }
 
--(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags {
-    NSMutableArray *paperMoney = [moneyBags mutableCopy];
-    
-    for (NSUInteger i = 0; i < [moneyBags count]; i++) {
-        NSString *coinsString = moneyBags[i];
-        NSUInteger coinsInt = [coinsString length];
-        
-        switch (coinsInt) {
-            case 1:
-                [paperMoney replaceObjectAtIndex:i withObject:@"$1"];
-                break;
-            case 2:
-                [paperMoney replaceObjectAtIndex:i withObject:@"$2"];
-                break;
-            case 5:
-                [paperMoney replaceObjectAtIndex:i withObject:@"$5"];
-                break;
-            case 10:
-                [paperMoney replaceObjectAtIndex:i withObject:@"$10"];
-                break;
-            default:
-                break;
-        }
-    }
-    return paperMoney;
-}
-
 //-(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags {
-//    NSString *coinCount = @"";
-//    NSMutableArray *coinsToCash = [[NSMutableArray alloc]init];
+//    NSMutableArray *paperMoney = [moneyBags mutableCopy];
 //    
 //    for (NSUInteger i = 0; i < [moneyBags count]; i++) {
-//        coinCount = moneyBags[i];
-//        coinCount = [NSString stringWithFormat:@"$%lu",[coinCount length]];
-//        [coinsToCash addObject:coinCount];
+//        NSString *coinsString = moneyBags[i];
+//        NSUInteger coinsInt = [coinsString length];
+//        
+//        switch (coinsInt) {
+//            case 1:
+//                [paperMoney replaceObjectAtIndex:i withObject:@"$1"];
+//                break;
+//            case 2:
+//                [paperMoney replaceObjectAtIndex:i withObject:@"$2"];
+//                break;
+//            case 5:
+//                [paperMoney replaceObjectAtIndex:i withObject:@"$5"];
+//                break;
+//            case 10:
+//                [paperMoney replaceObjectAtIndex:i withObject:@"$10"];
+//                break;
+//            default:
+//                break;
+//        }
 //    }
-//    return coinsToCash;
+//    return paperMoney;
 //}
+
+-(NSArray *)arrayByConvertingMoneyBagsIntoPaperBills:(NSArray *)moneyBags {
+    NSString *coinCount = @"";
+    NSMutableArray *coinsToCash = [[NSMutableArray alloc]init];
+    
+    for (NSUInteger i = 0; i < [moneyBags count]; i++) {
+        coinCount = moneyBags[i];
+        coinCount = [NSString stringWithFormat:@"$%lu",[coinCount length]];
+        [coinsToCash addObject:coinCount];
+    }
+    return coinsToCash;
+}
 
 @end
