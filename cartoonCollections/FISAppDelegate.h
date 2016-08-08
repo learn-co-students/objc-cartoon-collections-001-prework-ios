@@ -18,7 +18,7 @@
 
 - (NSString *) summonCaptainPlanetWithPowers: (NSArray *)powers;
 
-- (NSString *) firstPremiumCheeseInStock: (NSArray *) cheesesInStock withPremiumCheeses: (NSArray *)premiumCheeseNames;
+- (NSString *) firstPremiumCheeseInStock: (NSArray *)cheesesInStock premiumCheeseNames: (NSArray *)names;
 
 - (NSArray *) arrayByConvertingMoneyBagsIntoPaperBills: (NSArray *)moneyBags;
 
