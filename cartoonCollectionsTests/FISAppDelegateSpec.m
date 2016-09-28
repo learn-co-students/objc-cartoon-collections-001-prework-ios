@@ -133,7 +133,7 @@ describe(@"FISAppDelegate", ^{
                                        @"$$"         ,
                                        @"$$$$$$$$$$" ];
                 
-                scroogesPaperBills = @[ @"$5"  ,
+                scroogesPaperBills = @[ @"$5"  ,	
                                         @"$1"  ,
                                         @"$2"  ,
                                         @"$10" ];
