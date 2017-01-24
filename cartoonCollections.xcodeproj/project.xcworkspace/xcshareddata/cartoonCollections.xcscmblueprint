@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "499FD2A1353DDDC8242D3331A697480601E54E86",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "499FD2A1353DDDC8242D3331A697480601E54E86" : 0,
+    "C73283CC8223E9FD5C3A29887AE785DDE1FA5A07" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "BF4BC5B5-FA44-4513-94E1-AA43F3E88309",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "499FD2A1353DDDC8242D3331A697480601E54E86" : "objc-cartoon-collections-001-prework-ios\/",
+    "C73283CC8223E9FD5C3A29887AE785DDE1FA5A07" : ".."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "cartoonCollections",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "cartoonCollections.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ellscha\/objc-cartoon-collections-001-prework-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "499FD2A1353DDDC8242D3331A697480601E54E86"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ellscha\/ios-fibo-finder-001-prework-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C73283CC8223E9FD5C3A29887AE785DDE1FA5A07"
+    }
+  ]
+}
